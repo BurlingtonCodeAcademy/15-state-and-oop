@@ -1,3 +1,4 @@
+// inheritance example
 const fido = {
     name: 'Fido',
     color: 'brown',
@@ -39,6 +40,8 @@ class Dog extends Animal {
 // const scooby = new Dog('Scooby', 'brown');
 // console.log(scooby.describe());
 
+
+// abstraction example
 class Rectangle {
     constructor(width, height) {
         this.width = width;
@@ -68,6 +71,7 @@ function showPerimeter(shape) {
 
 // console.log(showPerimeter(shape))
 
+// polymorphism example
 class Fruit {
     constructor(hasSeeds, flavor) {
         this.hasSeeds = hasSeeds;
