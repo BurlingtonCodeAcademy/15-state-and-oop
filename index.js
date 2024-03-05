@@ -18,20 +18,22 @@ let states = {
     yield: ["red"]
 }
 
-let currentState = "green";
-console.log("You are now in the " + currentState + " state");
+let currentState = "green"; // set the initial state
+console.log("You are now in the " + currentState + " state"); // log the initial state
 
 function enterState(newState) {
-    let validTransitions = states[currentState];
+    let validTransitions = states[currentState]; // captures valid transitions from the states object above
+
+    // if validTransitions includes the newState, then set currentState to newState
     if (validTransitions.includes(newState)) {
-        currentState = newState;
-        console.log("You are now in the " + currentState + " state");
+        currentState = newState; // set currentState to newState
+        console.log("You are now in the " + currentState + " state"); // log the new state
     } else {
-        throw ("You cannot enter the " + newState + " state from the " + currentState + " state");
+        throw ("You cannot enter the " + newState + " state from the " + currentState + " state"); // throw an error if the newState is not valid
     }
 }
 
-enterState("yellow");
+enterState("yellow"); // call the function with a valid newState
 enterState("red");
 enterState("yield");
 enterState("red");
